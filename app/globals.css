@@ -1,26 +1,107 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  Procura RFx — enterprise design system.
+  Data-dense, neutral surfaces, single indigo accent. Light and dark aware.
+*/
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root {
+  --background: #f7f7f8;
+  --surface: #ffffff;
+  --surface-2: #fbfbfc;
+  --border: #e6e6e9;
+  --border-strong: #d5d5da;
+  --foreground: #1a1a1e;
+  --muted: #6b6b76;
+  --muted-2: #8b8b95;
+  --accent: #5b52e0;
+  --accent-fg: #ffffff;
+  --accent-soft: #eeecfb;
+  --success: #12805c;
+  --success-soft: #e2f5ee;
+  --warning: #a35b00;
+  --warning-soft: #fbeeda;
+  --danger: #c02434;
+  --danger-soft: #fbe6e8;
+  --info: #1f6feb;
+  --info-soft: #e5effc;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0c0c0e;
+    --surface: #151518;
+    --surface-2: #1b1b1f;
+    --border: #26262b;
+    --border-strong: #34343b;
+    --foreground: #ededf0;
+    --muted: #9a9aa4;
+    --muted-2: #6f6f79;
+    --accent: #7b73f0;
+    --accent-fg: #0c0c0e;
+    --accent-soft: #211f3a;
+    --success: #37c391;
+    --success-soft: #10261f;
+    --warning: #e0a35a;
+    --warning-soft: #2a1f10;
+    --danger: #f0808d;
+    --danger-soft: #2a1315;
+    --info: #6ba6f5;
+    --info-soft: #101d2e;
   }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-2: var(--muted-2);
+  --color-accent: var(--accent);
+  --color-accent-fg: var(--accent-fg);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-warning: var(--warning);
+  --color-warning-soft: var(--warning-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tabular figures for all numeric data cells */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 8px;
+  border: 2px solid var(--background);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
 }
