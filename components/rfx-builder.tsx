@@ -21,7 +21,7 @@ interface ChatMsg {
 }
 
 const SEED_PROMPT =
-  "We need corrugated packaging for our 5 North American DCs for the next 12 months — around 30 SKUs: RSC shipping boxes in several sizes, die-cut mailers, corrugated pads and pallet tier sheets, export boxes, and a couple of printed cartons. Net 45, delivered, and we want FSC/ISO compliant suppliers. Draft the RFx.",
+  "We need corrugated packaging for our 5 North American DCs for the next 12 months — around 30 SKUs: RSC shipping boxes in several sizes, die-cut mailers, corrugated pads and pallet tier sheets, export boxes, and a couple of printed cartons. Net 45, delivered, and we want FSC/ISO compliant suppliers. Draft the RFx."
 
 const STEPS = [
   { key: "scope", label: "Scope", icon: FileText },
